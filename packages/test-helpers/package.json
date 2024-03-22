@@ -1,0 +1,29 @@
+{
+  "name": "@makerdao/test-helpers",
+  "description": "test helpers for the monorepo",
+  "version": "0.4.0-alpha.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/test-helpers.umd.production.min.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "scripts": {
+    "build": "yarn clean && tsdx build --format cjs,esm,umd",
+    "clean": "rm -rf ./dist",
+    "prepublishOnly": "yarn build",
+    "test": "jest"
+  },
+  "files": [
+    "package.json",
+    "LICENSE",
+    "dist/**/*",
+    "umd/*"
+  ],
+  "gitHead": "035aa87023c84916295cd4a2735cb2f6fdb1506e",
+  "peerDependencies": {
+    "@makerdao/dai": "^0.41.0-alpha.2"
+  }
+}
